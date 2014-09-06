@@ -1,0 +1,148 @@
+@primary-color: #5a431a; 
+@secondary-color: #ab8631; 
+@third-color: #d9d0b9; 
+/*
+FUNÇÕES PADRÕES START
+*********************************************************************/
+.border-radius(@style) {
+    -webkit-border-radius: @style;
+    -moz-border-radius: @style;
+    border-radius: @style;
+}
+.box-shadow(@style, @c) when (iscolor(@c)) {
+    -webkit-box-shadow: @style @c;
+    box-shadow:         @style @c;
+}
+.box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
+    .box-shadow(@style, rgba(0, 0, 0, @alpha));
+}
+
+.clear, .first{
+    clear:both;
+}
+/*********************************************************************
+FUNÇÕES PADRÕES END
+*/
+/*
+NON-RESPONSIVE START
+**********************************************************************************************/
+/**********************************************************************************************
+NON-RESPONSIVE END
+*/
+::selection {background-color: @primary-color;color: #FFF;}
+::-moz-selection {background-color: @primary-color;color: #FFF;}
+small {display: inline-block;line-height: 1.1;}
+textarea {resize:vertical;}
+a {transition: all 0.25s ease 0s;}
+label {font-weight: normal;}
+/*
+FONTS START
+**********************************************************************************************/
+.btn {font-family: 'ralewayheavy', Arial, sans-serif;}
+/**********************************************************************************************
+FONTS END
+*/
+/*
+ESTRUTURA START
+**********************************************************************************************/
+body {background: #020202;}
+.extra-header {
+    background: url(../imagem/site/bg-header.jpg) repeat-x top center;
+    .site-header {height: 67px;}
+    .navbar {border:0;margin-bottom: 0;}
+    .navbar-brand {padding-top:15px;padding-bottom: 20px;float:none;display: inline-block;}
+}
+.extra-central {
+    background: url(../imagem/site/bg-central.jpg) no-repeat center top #020202;
+    .site-central {min-height: 730px;}
+}
+.extra-footer {
+    background: url(../imagem/site/bg-footer-x.jpg) repeat-x top #181108;color: @third-color;
+    .site-footer {
+        background: url(../imagem/site/bg-footer.jpg) no-repeat center top;padding-top:18px;padding-bottom: 18px;font-size: 10px;
+        .footer-center {padding-top:10px;}
+    }
+}
+/**********************************************************************************************
+ESTRUTURA END
+*/
+/*
+CLASSES START
+**********************************************************************************************/
+[class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
+.btn {font-size: 12px;padding:10px 30px;}
+.btn-default {background-color: @third-color;}
+.btn-primary {color: @third-color;}
+.box-home {
+    .box-header {
+        color: @secondary-color;margin:30px 0;
+        .media-heading {color: @third-color;}
+        .desc {
+            max-width: 400px;margin:0 auto;
+            .text {width: 72%;line-height: 1.1;}
+            > * {display: inline-block;vertical-align: top; }
+        }
+    }
+    .box-content {
+        text-align: center;
+        .inline-block {vertical-align: middle;}
+        .empresa {
+            display: inline-block;vertical-align: middle;
+            &.maricotinha-boulevard {margin:-26px;}
+            &.maricotinha-bar {margin:-26px;}
+            &.boteco-modesto {margin:-26px;}
+            &.cortico-pub {margin:-26px;}
+            &.favela-chic {margin:-26px;}
+            &.baronesa {margin:-26px;}
+            &.duquesa {margin:-26px;}
+        }
+    }
+}
+.form-control {background-color: @third-color;color:@primary-color;}
+.modal-content {
+    background: url(../imagem/site/bg-central.jpg) no-repeat center top; color: @third-color;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;overflow: hidden;
+    .modal-header {background: url(../imagem/site/bg-header.jpg) repeat-x top;padding:20px;border-bottom: 0;}
+    .modal-footer {border-top: 1px solid #463415;}
+}
+
+.inline-block {display:inline-block;}
+[class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/icon.png);}
+
+.space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
+.relative {position: relative;}
+/**********************************************************************************************
+CLASSES END
+*/
+/*
+JQUERY UI START
+**********************************************************************************************/
+
+/**********************************************************************************************
+JQUERY UI END
+*/
+@media print {
+
+}
+@media (max-width: 767px) {
+   /*    .site-geral:before {content:"TABLET";}*/
+   .extra-footer {
+    .site-footer {
+        * {text-align: center;}
+    }
+}
+.box-home {
+    .desc {
+        max-width: none;
+        .text {width: 60%;}
+    }
+}
+}
+@media (max-width: 480px) {
+   /*#GERAL:before {content:"MOBILE";}*/
+}
+@media (min-width: 768px) and (max-width: 980px) {
+
+}
+@media (min-width: 981px) and (max-width: 1200px) {
+   /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+}

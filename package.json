@@ -1,0 +1,11 @@
+{
+  "name": "socialismo_sustentavel",
+  "version": "1.0.0",
+  "title": "Socialismo Sustentavel",
+  "homepage": "http://www.socialismosustentavel.com.br",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-less": "^0.11.4",
+    "grunt-contrib-watch": "^0.6.1"
+  }
+}
