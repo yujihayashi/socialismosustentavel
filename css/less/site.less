@@ -1,6 +1,6 @@
-@primary-color: #5a431a; 
-@secondary-color: #ab8631; 
-@third-color: #d9d0b9; 
+@primary-color: #9a0202; 
+@secondary-color: #a7da35; 
+@third-color: #5c5c5c; 
 /*
 FUNÇÕES PADRÕES START
 *********************************************************************/
@@ -26,6 +26,11 @@ FUNÇÕES PADRÕES END
 /*
 NON-RESPONSIVE START
 **********************************************************************************************/
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
+.container {max-width: none !important;width: 960px;}
+.navbar-nav > li > a {padding-top: 21px;padding-bottom:21px;}
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
+/* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: #428bca !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
 /**********************************************************************************************
 NON-RESPONSIVE END
 */
@@ -38,26 +43,65 @@ label {font-weight: normal;}
 /*
 FONTS START
 **********************************************************************************************/
-.btn {font-family: 'ralewayheavy', Arial, sans-serif;}
+.btn, .navbar-nav, .chamada strong {font-family: 'ralewayheavy', Arial, sans-serif;font-weight: normal;}
+.box-newsletter .box-header h2 {font-family: 'fe-fontnormal', Arial, sans-serif;}
+.box-newsletter .box-header h2 .exclamation {font-family: 'edo_szregular', Arial, sans-serif;}
 /**********************************************************************************************
 FONTS END
 */
 /*
 ESTRUTURA START
 **********************************************************************************************/
-body {background: #020202;}
 .extra-header {
     background: url(../imagem/site/bg-header.jpg) repeat-x top center;
-    .site-header {height: 67px;}
+    .site-header {}
+    .line-1 {height: 146px;}
     .navbar {border:0;margin-bottom: 0;}
+    .navbar-nav {
+        float: none;
+        > li {
+            width: 20%;text-align: center;font-size: 13px;text-transform: uppercase;text-shadow:0 0 8px rgba(0, 0, 0, .44);
+            + li {
+                > a {border-left:1px solid #151515;}
+            }
+        }
+    }
+    .navbar-header {float: none;}
     .navbar-brand {padding-top:15px;padding-bottom: 20px;float:none;display: inline-block;}
+    .box-newsletter, .box-social {float: right;}
+    .box-social {
+        padding-top: 40px;width: 100px;
+        .box-content {
+            > span {
+                float: left;width: 50%;height: 38px;display: block;text-align: center;
+                > a, > span {display: inline-block; max-width: 96%;}
+                * {vertical-align: middle;}
+            }
+        }
+    }
+    .box-newsletter {
+        padding-top: 50px;
+        .box-header {
+            h2 {
+                color: #FFF;font-size: 13px;font-weight: normal;
+                strong {font-size: 19px;color: @secondary-color;font-weight: normal;}
+            }
+        }
+        .form-control {background-color: #1d1d1d;-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;border:1px solid #080808;border-right-color: #373737;border-bottom-color: #373737;}
+        .btn {background-color: #232323;color: @third-color;}
+    }
+    [class^='col-'] {
+        > [class^='box-'] {
+            + [class^='box-'] {margin-right: 30px;}
+        }
+    }
 }
 .extra-central {
-    background: url(../imagem/site/bg-central.jpg) no-repeat center top #020202;
+
     .site-central {min-height: 730px;}
 }
 .extra-footer {
-    background: url(../imagem/site/bg-footer-x.jpg) repeat-x top #181108;color: @third-color;
+    color: @third-color;
     .site-footer {
         background: url(../imagem/site/bg-footer.jpg) no-repeat center top;padding-top:18px;padding-bottom: 18px;font-size: 10px;
         .footer-center {padding-top:10px;}
@@ -70,31 +114,26 @@ ESTRUTURA END
 CLASSES START
 **********************************************************************************************/
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
-.btn {font-size: 12px;padding:10px 30px;}
+.btn {font-size: 13px;text-transform: uppercase;}
 .btn-default {background-color: @third-color;}
 .btn-primary {color: @third-color;}
-.box-home {
-    .box-header {
-        color: @secondary-color;margin:30px 0;
-        .media-heading {color: @third-color;}
-        .desc {
-            max-width: 400px;margin:0 auto;
-            .text {width: 72%;line-height: 1.1;}
-            > * {display: inline-block;vertical-align: top; }
+.box-banner {
+    margin-bottom: 18px;
+    &, .cycle-slideshow, .cycle-slideshow li {width: 100%;}
+    .cycle-slideshow {
+        li {
+            img {max-width: 100%;}
         }
     }
-    .box-content {
-        text-align: center;
-        .inline-block {vertical-align: middle;}
-        .empresa {
-            display: inline-block;vertical-align: middle;
-            &.maricotinha-boulevard {margin:-26px;}
-            &.maricotinha-bar {margin:-26px;}
-            &.boteco-modesto {margin:-26px;}
-            &.cortico-pub {margin:-26px;}
-            &.favela-chic {margin:-26px;}
-            &.baronesa {margin:-26px;}
-            &.duquesa {margin:-26px;}
+}
+.box-chamadas {
+    .chamada {
+        height: 182px;background: #FFF;font-size: 17px;line-height: 1;padding:14px 18px;display: block;color: @third-color;
+        span {display: inline-block;}
+        strong {display: inline-block;line-height: .8;}
+        small {font-size:14px;}
+        &.red {
+            background:@primary-color;color:#FFF;
         }
     }
 }
