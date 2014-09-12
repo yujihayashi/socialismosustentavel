@@ -1,6 +1,32 @@
 @primary-color: #9a0202; 
 @secondary-color: #a7da35; 
-@third-color: #5c5c5c; 
+@third-color: #5c5c5c;  
+/*
+Theme Name: Socialismo Sustentável
+Author: Libra Design +Tech
+Author URI: http://www.libradesign.com.br/
+Description: Layout para o projeto Socialismo Sustentável
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: socialismosustentavel
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/**
+ * 1.0 Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+ * along with Nicolas Gallagher and Jonathan Neal
+ * http://necolas.github.com/normalize.css/ and Blueprint
+ * http://www.blueprintcss.org/
+ *
+ * -----------------------------------------------------------------------------
+ */
 /*
 FUNÇÕES PADRÕES START
 *********************************************************************/
@@ -53,7 +79,7 @@ FONTS END
 ESTRUTURA START
 **********************************************************************************************/
 .extra-header {
-    background: url(../imagem/site/bg-header.jpg) repeat-x top center;
+    background: url(imagem/site/bg-header.jpg) repeat-x top center;
     .site-header {}
     .line-1 {height: 146px;}
     .navbar {border:0;margin-bottom: 0;}
@@ -63,6 +89,9 @@ ESTRUTURA START
             width: 20%;text-align: center;font-size: 13px;text-transform: uppercase;text-shadow:0 0 8px rgba(0, 0, 0, .44);
             + li {
                 > a {border-left:1px solid #151515;}
+            }
+            &.current-menu-item, &.current-menu-parent {
+                > a {background: @primary-color ;color: #FFF;}
             }
         }
     }
@@ -103,7 +132,7 @@ ESTRUTURA START
 .extra-footer {
     color: @third-color;
     .site-footer {
-        background: url(../imagem/site/bg-footer.jpg) no-repeat center top;padding-top:18px;padding-bottom: 18px;font-size: 10px;
+        background: url(imagem/site/bg-footer.jpg) no-repeat center top;padding-top:18px;padding-bottom: 18px;font-size: 10px;
         .footer-center {padding-top:10px;}
     }
 }
@@ -139,13 +168,13 @@ CLASSES START
 }
 .form-control {background-color: @third-color;color:@primary-color;}
 .modal-content {
-    background: url(../imagem/site/bg-central.jpg) no-repeat center top; color: @third-color;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;overflow: hidden;
-    .modal-header {background: url(../imagem/site/bg-header.jpg) repeat-x top;padding:20px;border-bottom: 0;}
+    background: url(imagem/site/bg-central.jpg) no-repeat center top; color: @third-color;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;overflow: hidden;
+    .modal-header {background: url(imagem/site/bg-header.jpg) repeat-x top;padding:20px;border-bottom: 0;}
     .modal-footer {border-top: 1px solid #463415;}
 }
 
 .inline-block {display:inline-block;}
-[class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/icon.png);}
+[class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(imagem/site/icon.png);}
 
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}

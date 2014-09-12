@@ -1,0 +1,395 @@
+/*
+Theme Name: Socialismo Sustentável
+Author: Libra Design +Tech
+Author URI: http://www.libradesign.com.br/
+Description: Layout para o projeto Socialismo Sustentável
+Version: 1.2
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: socialismosustentavel
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/**
+ * 1.0 Reset
+ *
+ * Resetting and rebuilding styles have been helped along thanks to the fine
+ * work of Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+ * along with Nicolas Gallagher and Jonathan Neal
+ * http://necolas.github.com/normalize.css/ and Blueprint
+ * http://www.blueprintcss.org/
+ *
+ * -----------------------------------------------------------------------------
+ */
+/*
+FUNÇÕES PADRÕES START
+*********************************************************************/
+.clear,
+.first {
+  clear: both;
+}
+/*********************************************************************
+FUNÇÕES PADRÕES END
+*/
+/*
+NON-RESPONSIVE START
+**********************************************************************************************/
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
+.container {
+  max-width: none !important;
+  width: 960px;
+}
+.navbar-nav > li > a {
+  padding-top: 21px;
+  padding-bottom: 21px;
+}
+/* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
+/* Finesse the page header spacing */
+.page-header {
+  margin-bottom: 30px;
+}
+.page-header .lead {
+  margin-bottom: 10px;
+}
+/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*/
+/* Reset the container */
+/* Always float the navbar header */
+.navbar-header {
+  float: left;
+}
+/* Undo the collapsing navbar */
+.navbar-collapse {
+  display: block !important;
+  height: auto !important;
+  padding-bottom: 0;
+  overflow: visible !important;
+}
+.navbar-toggle {
+  display: none;
+}
+.navbar-collapse {
+  border-top: 0;
+}
+.navbar-brand {
+  margin-left: -15px;
+}
+/* Always apply the floated nav */
+.navbar-nav {
+  float: left;
+  margin: 0;
+}
+.navbar-nav > li {
+  float: left;
+}
+/* Redeclare since we override the float above */
+.navbar-nav.navbar-right {
+  float: right;
+}
+/* Undo custom dropdowns */
+.navbar .navbar-nav .open .dropdown-menu {
+  position: absolute;
+  float: left;
+  background-color: #fff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-width: 0 1px 1px;
+  border-radius: 0 0 4px 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+}
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+  color: #333;
+}
+.navbar .navbar-nav .open .dropdown-menu > li > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > li > a:focus,
+.navbar .navbar-nav .open .dropdown-menu > .active > a,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+  color: #fff !important;
+  background-color: #428bca !important;
+}
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+  color: #999 !important;
+  background-color: transparent !important;
+}
+/**********************************************************************************************
+NON-RESPONSIVE END
+*/
+::selection {
+  background-color: #9a0202;
+  color: #FFF;
+}
+::-moz-selection {
+  background-color: #9a0202;
+  color: #FFF;
+}
+small {
+  display: inline-block;
+  line-height: 1.1;
+}
+textarea {
+  resize: vertical;
+}
+a {
+  transition: all 0.25s ease 0s;
+}
+label {
+  font-weight: normal;
+}
+/*
+FONTS START
+**********************************************************************************************/
+.btn,
+.navbar-nav,
+.chamada strong {
+  font-family: 'ralewayheavy', Arial, sans-serif;
+  font-weight: normal;
+}
+.box-newsletter .box-header h2 {
+  font-family: 'fe-fontnormal', Arial, sans-serif;
+}
+.box-newsletter .box-header h2 .exclamation {
+  font-family: 'edo_szregular', Arial, sans-serif;
+}
+/**********************************************************************************************
+FONTS END
+*/
+/*
+ESTRUTURA START
+**********************************************************************************************/
+.extra-header {
+  background: url(imagem/site/bg-header.jpg) repeat-x top center;
+}
+.extra-header .line-1 {
+  height: 146px;
+}
+.extra-header .navbar {
+  border: 0;
+  margin-bottom: 0;
+}
+.extra-header .navbar-nav {
+  float: none;
+}
+.extra-header .navbar-nav > li {
+  width: 20%;
+  text-align: center;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.44);
+}
+.extra-header .navbar-nav > li + li > a {
+  border-left: 1px solid #151515;
+}
+.extra-header .navbar-nav > li.current-menu-item > a,
+.extra-header .navbar-nav > li.current-menu-parent > a {
+  background: #9a0202;
+  color: #FFF;
+}
+.extra-header .navbar-header {
+  float: none;
+}
+.extra-header .navbar-brand {
+  padding-top: 15px;
+  padding-bottom: 20px;
+  float: none;
+  display: inline-block;
+}
+.extra-header .box-newsletter,
+.extra-header .box-social {
+  float: right;
+}
+.extra-header .box-social {
+  padding-top: 40px;
+  width: 100px;
+}
+.extra-header .box-social .box-content > span {
+  float: left;
+  width: 50%;
+  height: 38px;
+  display: block;
+  text-align: center;
+}
+.extra-header .box-social .box-content > span > a,
+.extra-header .box-social .box-content > span > span {
+  display: inline-block;
+  max-width: 96%;
+}
+.extra-header .box-social .box-content > span * {
+  vertical-align: middle;
+}
+.extra-header .box-newsletter {
+  padding-top: 50px;
+}
+.extra-header .box-newsletter .box-header h2 {
+  color: #FFF;
+  font-size: 13px;
+  font-weight: normal;
+}
+.extra-header .box-newsletter .box-header h2 strong {
+  font-size: 19px;
+  color: #a7da35;
+  font-weight: normal;
+}
+.extra-header .box-newsletter .form-control {
+  background-color: #1d1d1d;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  border: 1px solid #080808;
+  border-right-color: #373737;
+  border-bottom-color: #373737;
+}
+.extra-header .box-newsletter .btn {
+  background-color: #232323;
+  color: #5c5c5c;
+}
+.extra-header [class^='col-'] > [class^='box-'] + [class^='box-'] {
+  margin-right: 30px;
+}
+.extra-central .site-central {
+  min-height: 730px;
+}
+.extra-footer {
+  color: #5c5c5c;
+}
+.extra-footer .site-footer {
+  background: url(imagem/site/bg-footer.jpg) no-repeat center top;
+  padding-top: 18px;
+  padding-bottom: 18px;
+  font-size: 10px;
+}
+.extra-footer .site-footer .footer-center {
+  padding-top: 10px;
+}
+/**********************************************************************************************
+ESTRUTURA END
+*/
+/*
+CLASSES START
+**********************************************************************************************/
+[class^='lista-'],
+[class^='lista-'],
+[class^='menu-'],
+[class^='menu-'] ul,
+.cycle-slideshow {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.btn {
+  font-size: 13px;
+  text-transform: uppercase;
+}
+.btn-default {
+  background-color: #5c5c5c;
+}
+.btn-primary {
+  color: #5c5c5c;
+}
+.box-banner {
+  margin-bottom: 18px;
+}
+.box-banner,
+.box-banner .cycle-slideshow,
+.box-banner .cycle-slideshow li {
+  width: 100%;
+}
+.box-banner .cycle-slideshow li img {
+  max-width: 100%;
+}
+.box-chamadas .chamada {
+  height: 182px;
+  background: #FFF;
+  font-size: 17px;
+  line-height: 1;
+  padding: 14px 18px;
+  display: block;
+  color: #5c5c5c;
+}
+.box-chamadas .chamada span {
+  display: inline-block;
+}
+.box-chamadas .chamada strong {
+  display: inline-block;
+  line-height: .8;
+}
+.box-chamadas .chamada small {
+  font-size: 14px;
+}
+.box-chamadas .chamada.red {
+  background: #9a0202;
+  color: #FFF;
+}
+.form-control {
+  background-color: #5c5c5c;
+  color: #9a0202;
+}
+.modal-content {
+  background: url(imagem/site/bg-central.jpg) no-repeat center top;
+  color: #5c5c5c;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.modal-content .modal-header {
+  background: url(imagem/site/bg-header.jpg) repeat-x top;
+  padding: 20px;
+  border-bottom: 0;
+}
+.modal-content .modal-footer {
+  border-top: 1px solid #463415;
+}
+.inline-block {
+  display: inline-block;
+}
+[class^='icon-'],
+[class*='icon-'] {
+  background-repeat: no-repeat;
+  vertical-align: middle;
+  display: inline-block;
+  background-image: url(imagem/site/icon.png);
+}
+.space {
+  width: 1%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+.relative {
+  position: relative;
+}
+/**********************************************************************************************
+CLASSES END
+*/
+/*
+JQUERY UI START
+**********************************************************************************************/
+/**********************************************************************************************
+JQUERY UI END
+*/
+@media (max-width: 767px) {
+  /*    .site-geral:before {content:"TABLET";}*/
+  .extra-footer .site-footer * {
+    text-align: center;
+  }
+  .box-home .desc {
+    max-width: none;
+  }
+  .box-home .desc .text {
+    width: 60%;
+  }
+}
+@media (max-width: 480px) {
+  /*#GERAL:before {content:"MOBILE";}*/
+}
+@media (min-width: 981px) and (max-width: 1200px) {
+  /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+}
