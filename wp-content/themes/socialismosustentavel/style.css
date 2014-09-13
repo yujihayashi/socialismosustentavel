@@ -254,6 +254,10 @@ ESTRUTURA START
 .extra-central .site-central {
   min-height: 730px;
 }
+.site-content {
+  background: #FFF;
+  padding: 20px;
+}
 .extra-footer {
   color: #5c5c5c;
 }
@@ -280,6 +284,24 @@ CLASSES START
   list-style: none;
   margin-bottom: 0;
   padding-left: 0;
+}
+.alignleft {
+  margin-right: 18px;
+  margin-bottom: 10px;
+  float: left;
+}
+.alignright {
+  margin-left: 18px;
+  margin-bottom: 10px;
+  float: right;
+}
+.aligncenter {
+  display: block;
+  margin: 0 auto;
+}
+.btn-gray {
+  background: #EEE;
+  color: #C93F2A;
 }
 .btn {
   font-size: 13px;
@@ -324,6 +346,14 @@ CLASSES START
 .box-chamadas .chamada.red {
   background: #9a0202;
   color: #FFF;
+}
+.entry-content:before,
+.entry-content:after {
+  display: table;
+  content: " ";
+}
+.entry-content:after {
+  clear: both;
 }
 .form-control {
   background-color: #5c5c5c;
