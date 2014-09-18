@@ -55,7 +55,7 @@
 							<div class="row">
 								<div class="col-xs-5">
 									<div class="navbar-header">
-										<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Voltar para a página inicial"><img src="<?php echo get_template_directory_uri(); ?>/imagem/site/socialismo-sustentavel.png" alt="Logotipo <?php bloginfo( 'name' ); ?>"></a>
+										<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="Voltar para a página inicial"><img src="<?php echo get_template_directory_uri(); ?>/imagem/site/socialistas.png" alt="Logotipo <?php bloginfo( 'name' ); ?>"></a>
 									</div> <!-- .navbar-header -->
 								</div> <!-- .col-xs-5 -->
 								<div class="col-xs-7">
