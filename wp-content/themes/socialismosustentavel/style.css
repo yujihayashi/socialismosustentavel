@@ -144,11 +144,13 @@ FONTS START
 **********************************************************************************************/
 .btn,
 .navbar-nav,
-.chamada strong {
+.chamada strong,
+.box-newsletter .sendpress-submit {
   font-family: 'ralewayheavy', Arial, sans-serif;
   font-weight: normal;
 }
-.box-newsletter .box-header h2 {
+.box-newsletter .box-header h2,
+.box-newsletter .widget-title {
   font-family: 'fe-fontnormal', Arial, sans-serif;
 }
 .box-newsletter .box-header h2 .exclamation {
@@ -222,18 +224,27 @@ ESTRUTURA START
 }
 .extra-header .box-newsletter {
   padding-top: 50px;
+  margin-right: 100px !important;
 }
-.extra-header .box-newsletter .box-header h2 {
+.extra-header .box-newsletter .box-header h2,
+.extra-header .box-newsletter .sendpress h2,
+.extra-header .box-newsletter .box-header .widget-title,
+.extra-header .box-newsletter .sendpress .widget-title {
   color: #FFF;
   font-size: 13px;
   font-weight: normal;
+  margin: 0;
 }
-.extra-header .box-newsletter .box-header h2 strong {
+.extra-header .box-newsletter .box-header h2 strong,
+.extra-header .box-newsletter .sendpress h2 strong,
+.extra-header .box-newsletter .box-header .widget-title strong,
+.extra-header .box-newsletter .sendpress .widget-title strong {
   font-size: 19px;
   color: #a7da35;
   font-weight: normal;
 }
-.extra-header .box-newsletter .form-control {
+.extra-header .box-newsletter .form-control,
+.extra-header .box-newsletter .sp_email {
   background-color: #1d1d1d;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -244,9 +255,33 @@ ESTRUTURA START
   border-right-color: #373737;
   border-bottom-color: #373737;
 }
-.extra-header .box-newsletter .btn {
+.extra-header .box-newsletter .btn,
+.extra-header .box-newsletter .sendpress-submit {
   background-color: #232323;
   color: #5c5c5c;
+}
+.extra-header .box-newsletter .sendpress-submit {
+  border: 0;
+  padding: 4px 10px;
+  margin-top: 0;
+  font-size: 12px;
+  transition: all 0.25s ease 0s;
+}
+.extra-header .box-newsletter .sendpress-submit:hover {
+  background-color: #5c5c5c;
+  color: #232323;
+}
+.extra-header .box-newsletter #form-wrap {
+  width: 150px;
+  position: relative;
+}
+.extra-header .box-newsletter .sendpress-signup {
+  position: relative;
+}
+.extra-header .box-newsletter .submit {
+  position: absolute;
+  top: -2px;
+  right: -68px;
 }
 .extra-header [class^='col-'] > [class^='box-'] + [class^='box-'] {
   margin-right: 30px;

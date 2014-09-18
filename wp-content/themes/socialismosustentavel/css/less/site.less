@@ -69,8 +69,8 @@ label {font-weight: normal;}
 /*
 FONTS START
 **********************************************************************************************/
-.btn, .navbar-nav, .chamada strong {font-family: 'ralewayheavy', Arial, sans-serif;font-weight: normal;}
-.box-newsletter .box-header h2 {font-family: 'fe-fontnormal', Arial, sans-serif;}
+.btn, .navbar-nav, .chamada strong, .box-newsletter .sendpress-submit {font-family: 'ralewayheavy', Arial, sans-serif;font-weight: normal;}
+.box-newsletter .box-header h2, .box-newsletter .widget-title {font-family: 'fe-fontnormal', Arial, sans-serif;}
 .box-newsletter .box-header h2 .exclamation {font-family: 'edo_szregular', Arial, sans-serif;}
 /**********************************************************************************************
 FONTS END
@@ -109,15 +109,22 @@ ESTRUTURA START
         }
     }
     .box-newsletter {
-        padding-top: 50px;
-        .box-header {
-            h2 {
-                color: #FFF;font-size: 13px;font-weight: normal;
+        padding-top: 50px;margin-right: 100px !important;
+        .box-header, .sendpress {
+            h2, .widget-title {
+                color: #FFF;font-size: 13px;font-weight: normal;margin:0;
                 strong {font-size: 19px;color: @secondary-color;font-weight: normal;}
             }
         }
-        .form-control {background-color: #1d1d1d;-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;border:1px solid #080808;border-right-color: #373737;border-bottom-color: #373737;}
-        .btn {background-color: #232323;color: @third-color;}
+        .form-control, .sp_email {background-color: #1d1d1d;-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;border:1px solid #080808;border-right-color: #373737;border-bottom-color: #373737;}
+        .btn, .sendpress-submit {background-color: #232323;color: @third-color;}
+        .sendpress-submit {
+            border:0;padding:4px 10px;margin-top:0;font-size: 12px;transition: all 0.25s ease 0s;
+            &:hover {background-color: #5c5c5c;color: #232323;}
+        }
+        #form-wrap {width:150px;position: relative;}
+        .sendpress-signup {position: relative;}
+        .submit {position: absolute;top: -2px;right:-68px;}
     }
     [class^='col-'] {
         > [class^='box-'] {

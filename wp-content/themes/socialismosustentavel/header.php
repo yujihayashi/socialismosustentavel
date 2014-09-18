@@ -83,18 +83,7 @@
 										</div> <!-- .box-content -->
 									</div> <!-- .box-social -->
 									<div class="box-newsletter">
-										<div class="box-header">
-											<h2 class="media-heading">Quero <strong>novidades<span class="exclamation">!</span></strong></h2>
-										</div> <!-- .box-header -->
-										<div class="box-content">
-											<form action="" class="form-inline">
-												<div class="form-group">
-													<label class="sr-only">Seu e-mail:</label>
-													<input type="email" class="form-control">
-												</div> <!-- .form-group -->
-												<button type="submit" class="btn btn-default btn-sm">Enviar</button>
-											</form>
-										</div> <!-- .box-content -->
+										<?php get_sidebar( 'footer' ); ?>
 									</div> <!-- .box-newsletter -->
 								</div> <!-- .col-xs-7 -->
 							</div> <!-- .row -->
