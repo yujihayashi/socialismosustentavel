@@ -347,6 +347,12 @@ CLASSES START
   background: #9a0202;
   color: #FFF;
 }
+.box-chamadas .chamada.red:hover {
+  box-shadow: 0 0 10px #C30;
+}
+.box-chamadas .chamada:hover {
+  box-shadow: 0 0 10px #FFF;
+}
 .entry-content:before,
 .entry-content:after {
   display: table;
