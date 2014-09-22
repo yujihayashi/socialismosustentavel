@@ -45,7 +45,7 @@ get_header(); ?>
 			<div class="col-xs-4">
 				<a href="/faca-parte/" class="chamada text-center">
 					<img src="<?php echo get_template_directory_uri(); ?>/imagem/site/logomarca-socialismo-sustentavel.png" alt="Logomarca Socialismo Sustentável"><br>
-					<span>Veja quem está por<br> trás desta <strong class="" style="font-size:31px;">ideia</strong></span>
+					<span>Veja quem já<br> aderiu a essa <strong class="" style="font-size:31px;">ideia</strong></span>
 				</a> <!-- .chamada -->
 			</div> <!-- .col-xs-4 -->
 			<div class="col-xs-4">
