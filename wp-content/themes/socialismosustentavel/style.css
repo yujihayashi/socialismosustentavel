@@ -181,6 +181,7 @@ ESTRUTURA START
   font-size: 13px;
   text-transform: uppercase;
   text-shadow: 0 0 8px rgba(0, 0, 0, 0.44);
+  position: relative;
 }
 .extra-header .navbar-nav > li + li > a {
   border-left: 1px solid #151515;
@@ -189,6 +190,22 @@ ESTRUTURA START
 .extra-header .navbar-nav > li.current-menu-parent > a {
   background: #9a0202;
   color: #FFF;
+}
+.extra-header .navbar-nav .sub-menu {
+  position: absolute;
+  background: #9a0202;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  box-shadow: inset 0px 10px 10px rgba(0, 0, 0, 0.3);
+  display: none;
+}
+.extra-header .navbar-nav .sub-menu > li > a {
+  display: block;
+  padding: 6px 20px;
+  color: #FFF;
+  text-shadow: none;
+  text-transform: none;
 }
 .extra-header .navbar-header {
   float: none;

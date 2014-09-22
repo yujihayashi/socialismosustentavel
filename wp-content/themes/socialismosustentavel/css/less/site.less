@@ -86,12 +86,18 @@ ESTRUTURA START
     .navbar-nav {
         float: none;
         > li {
-            width: 20%;text-align: center;font-size: 13px;text-transform: uppercase;text-shadow:0 0 8px rgba(0, 0, 0, .44);
+            width: 20%;text-align: center;font-size: 13px;text-transform: uppercase;text-shadow:0 0 8px rgba(0, 0, 0, .44);position: relative;
             + li {
                 > a {border-left:1px solid #151515;}
             }
             &.current-menu-item, &.current-menu-parent {
                 > a {background: @primary-color ;color: #FFF;}
+            }
+        }
+        .sub-menu {
+            position: absolute;background: @primary-color;left: 0;top: 100%;width: 100%;box-shadow:inset 0px 10px 10px rgba(0, 0, 0, .3);display: none;
+            > li {
+                > a {display: block;padding:6px 20px;color: #FFF;text-shadow:none;text-transform: none;}
             }
         }
     }

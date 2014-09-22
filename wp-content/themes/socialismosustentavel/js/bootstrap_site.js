@@ -6,6 +6,12 @@ $(function() {
     $("#load").ajaxStop(function() {
         $(this).hide();
     });
+
+    $('.navbar-nav > li').hover(function () {
+        $(this).find('.sub-menu').stop(true, true).delay(50).fadeIn({duration: 600, queue: true, easing: 'easeInOutExpo'});
+    }, function () {
+        $(this).find('.sub-menu').stop(true, true).delay(50).fadeOut({duration: 600, queue: true, easing: 'easeInOutExpo'});
+    });
 });
 $(function() {
     $('.jImgFormat').find('img').each(function() {
