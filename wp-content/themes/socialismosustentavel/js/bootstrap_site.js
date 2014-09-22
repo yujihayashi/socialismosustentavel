@@ -12,6 +12,35 @@ $(function() {
     }, function () {
         $(this).find('.sub-menu').stop(true, true).delay(50).fadeOut({duration: 600, queue: true, easing: 'easeInOutExpo'});
     });
+
+    // The default axis is 'y', but in this demo, I want to scroll both
+    // You can modify any default like this
+    $.localScroll.defaults.axis = 'y';
+
+    // Scroll initially if there's a hash (#something) in the url 
+    $.localScroll.hash({
+        target: 'body', // Could be a selector or a jQuery object too.
+        queue:true,
+        duration:2000
+    });
+
+    /**
+     * NOTE: I use $.localScroll instead of $('#navigation').localScroll() so I
+     * also affect the >> and << links. I want every link in the page to scroll.
+     */
+     $('.navbar-nav, .navbar-header, .scroll-down').localScroll({
+        target: 'body', // could be a selector or a jQuery object too.
+        queue:true,
+        duration:2000,
+        hash:true,
+        //filter: {'.panel-group'},
+        onBefore:function( e, anchor, $target ){
+            // The 'this' is the settings object, can be modified
+        },
+        onAfter:function( anchor, settings ){
+            // The 'this' contains the scrolled element (#content)
+        }
+    });
 });
 $(function() {
     $('.jImgFormat').find('img').each(function() {
