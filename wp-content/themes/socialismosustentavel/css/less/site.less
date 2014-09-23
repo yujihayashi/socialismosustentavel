@@ -79,7 +79,6 @@ FONTS END
 ESTRUTURA START
 **********************************************************************************************/
 .extra-header {
-    background: url(imagem/site/bg-header.jpg) repeat-x top center;
     .site-header {}
     .line-1 {height: 146px;}
     .navbar {border:0;margin-bottom: 0;}
@@ -146,7 +145,7 @@ ESTRUTURA START
 .extra-footer {
     color: @third-color;
     .site-footer {
-        background: url(imagem/site/bg-footer.jpg) no-repeat center top;padding-top:18px;padding-bottom: 18px;font-size: 10px;
+        padding-top:18px;padding-bottom: 18px;font-size: 10px;
         .footer-center {padding-top:10px;}
     }
 }
@@ -163,7 +162,6 @@ CLASSES START
 .btn-gray {background: #EEE;color:#C93F2A;}
 .btn {font-size: 13px;text-transform: uppercase;}
 .btn-default {background-color: @third-color;}
-.btn-primary {color: @third-color;}
 .box-banner {
     margin-bottom: 18px;
     &, .cycle-slideshow, .cycle-slideshow li {width: 100%;}
@@ -188,10 +186,13 @@ CLASSES START
 }
 .entry-content:before, .entry-content:after {display: table;content: " ";}
 .entry-content:after {clear: both;}
-.form-control {background-color: @third-color;color:@primary-color;}
+.site-header {
+    .form-control {background-color: @third-color;color:@primary-color;}
+}
+.form-control {font-size: .8em;}
 .modal-content {
-    background: url(imagem/site/bg-central.jpg) no-repeat center top; color: @third-color;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;overflow: hidden;
-    .modal-header {background: url(imagem/site/bg-header.jpg) repeat-x top;padding:20px;border-bottom: 0;}
+    color: @third-color;-webkit-border-radius: 5px;-moz-border-radius: 5px;-ms-border-radius: 5px;-o-border-radius: 5px;border-radius: 5px;overflow: hidden;
+    .modal-header {padding:20px;border-bottom: 0;}
     .modal-footer {border-top: 1px solid #463415;}
 }
 

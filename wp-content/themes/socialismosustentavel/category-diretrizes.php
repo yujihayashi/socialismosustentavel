@@ -65,3 +65,4 @@ jQuery(document).ready(function ($) {
 <?php
 get_sidebar( 'content' );
 get_footer();
+

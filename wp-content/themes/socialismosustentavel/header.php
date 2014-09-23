@@ -8,6 +8,7 @@
  * @subpackage Twenty_Fourteen
  * @since Twenty Fourteen 1.0
  */
+
 ?><!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -37,7 +38,6 @@
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/fonts/stylesheet.css">
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/imagem/site/icon.css">
-	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/site.css">
 	<?php wp_head(); ?>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/jquery-1.9.1.min.js"></script>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/library/bootstrap/js/bootstrap.min.js"></script>

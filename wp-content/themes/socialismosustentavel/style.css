@@ -162,9 +162,6 @@ FONTS END
 /*
 ESTRUTURA START
 **********************************************************************************************/
-.extra-header {
-  background: url(imagem/site/bg-header.jpg) repeat-x top center;
-}
 .extra-header .line-1 {
   height: 146px;
 }
@@ -314,7 +311,6 @@ ESTRUTURA START
   color: #5c5c5c;
 }
 .extra-footer .site-footer {
-  background: url(imagem/site/bg-footer.jpg) no-repeat center top;
   padding-top: 18px;
   padding-bottom: 18px;
   font-size: 10px;
@@ -361,9 +357,6 @@ CLASSES START
 }
 .btn-default {
   background-color: #5c5c5c;
-}
-.btn-primary {
-  color: #5c5c5c;
 }
 .box-banner {
   margin-bottom: 18px;
@@ -413,12 +406,14 @@ CLASSES START
 .entry-content:after {
   clear: both;
 }
-.form-control {
+.site-header .form-control {
   background-color: #5c5c5c;
   color: #9a0202;
 }
+.form-control {
+  font-size: .8em;
+}
 .modal-content {
-  background: url(imagem/site/bg-central.jpg) no-repeat center top;
   color: #5c5c5c;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -428,7 +423,6 @@ CLASSES START
   overflow: hidden;
 }
 .modal-content .modal-header {
-  background: url(imagem/site/bg-header.jpg) repeat-x top;
   padding: 20px;
   border-bottom: 0;
 }
